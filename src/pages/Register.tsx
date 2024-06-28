@@ -8,7 +8,7 @@ export default function Register() {
       <FormAuth />
       <section>
         <p>
-          Ya tienes cuanta? <Link to='/login'>Inicia sesión</Link>
+          Ya tienes cuanta? <Link to='/'>Inicia sesión</Link>
         </p>
       </section>
     </>

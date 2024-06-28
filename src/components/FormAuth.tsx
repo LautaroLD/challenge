@@ -34,7 +34,6 @@ export default function FormAuth() {
     if (!loc.pathname.includes('/register')) {
       try {
         await signInWithEmailAndPassword(auth, data.email, data.password);
-        navigate('/');
       } catch (error) {
         setErrorMessage('Email o contraseña inválidos');
       } finally {

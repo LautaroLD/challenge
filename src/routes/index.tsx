@@ -11,19 +11,21 @@ export default function Navigation() {
   const { isAuth } = useContext(AppContext);
   return (
     <BrowserRouter>
-      <Routes>
-        {!isAuth && (
+      {!isAuth && (
+        <Routes>
           <Route path='/' element={<AuthLayout />}>
-            <Route index path='login' element={<Login />} />
+            <Route index element={<Login />} />
             <Route path='register' element={<Register />} />
           </Route>
-        )}
-        {isAuth && (
+        </Routes>
+      )}
+      {isAuth && (
+        <Routes>
           <Route path='/' element={<AppLayout />}>
-            <Route path='home' element={<Home />} />
+            <Route index element={<Home />} />
           </Route>
-        )}
-      </Routes>
+        </Routes>
+      )}
     </BrowserRouter>
   );
 }
