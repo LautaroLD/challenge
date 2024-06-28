@@ -1,0 +1,45 @@
+@import './header';
+@import './home';
+@import './auth';
+
+html {
+  font-family: 'Roboto';
+}
+
+* {
+  margin    : 0px;
+  padding   : 0%;
+  object-fit: contain;
+}
+
+
+
+.errorMessage {
+  text-align: center;
+  color     : red;
+}
+
+.formTask,
+.formAuth {
+  display       : flex;
+  flex-direction: column;
+  gap           : 20px;
+  border        : 1px solid gainsboro;
+  max-width     : 400px;
+  width         : 90vw;
+  margin        : auto;
+  padding       : 15px;
+
+  .input {
+    width: 100%;
+  }
+
+  .completed {
+    color: green;
+  }
+
+  .errorMessage {
+    margin: 0px;
+    color : red
+  }
+}

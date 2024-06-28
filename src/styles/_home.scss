@@ -1,0 +1,71 @@
+.homePage {
+  display              : grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows   : none;
+
+  @media (max-width: 768px) {
+    grid-template-rows   : repeat(2, 1fr);
+    grid-template-columns: none;
+
+  }
+
+  .taskList {
+    list-style: none;
+
+    .TaskEmpty {
+      display        : flex;
+      justify-content: center;
+      padding        : 50px;
+      font-weight    : bold;
+    }
+
+    li {
+      margin         : 5px;
+      border         : 1px gainsboro solid;
+      padding        : 10px;
+      border-radius  : 20px;
+      display        : flex;
+      justify-content: space-between;
+      align-items    : center;
+
+      .icon {
+        cursor: pointer;
+      }
+
+      .description {
+        max-width    : 100px;
+        overflow     : hidden;
+        text-overflow: ellipsis;
+        white-space  : nowrap;
+      }
+
+      .modalTask {
+        position  : absolute;
+        inset     : 0%;
+        background: #00000063;
+        display   : flex;
+
+        .content {
+          background: #fff;
+          width     : fit-content;
+          margin    : auto;
+          padding   : 5px;
+        }
+      }
+    }
+
+    .completed {
+      border-color    : green;
+      text-decoration : line-through;
+      background-color: rgba(0, 128, 0, 0.37);
+    }
+  }
+
+  .formTask {
+    display          : flex;
+    flex-direction   : column;
+    gap              : 20px;
+    width            : fit-content;
+    // margin-right  : auto;
+  }
+}
