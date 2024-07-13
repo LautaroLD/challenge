@@ -39,7 +39,7 @@ export default function FormNewTask({
     },
   });
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
-    if (title && description && status && id && handleModal) {
+    if (id && handleModal) {
       updateTask(id, {
         ...data,
         id: id,
